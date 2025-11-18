@@ -75,6 +75,3 @@ This project is open-source and available under the [MIT](./License) License.
 
 #### 💡 Feel free to reach out if you have any questions or ideas to improve the platform!
 
-## Author
-
-- [Sudharsan](https://www.facebook.com/sudharsandaniel01)
