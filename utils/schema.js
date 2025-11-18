@@ -59,4 +59,19 @@ export const InterviewAnalytics = pgTable("interviewAnalytics", {
   totalTimeSpent: integer("totalTimeSpent"), // in minutes
   completedAt: timestamp("completedAt"),
   createdAt: timestamp("createdAt").defaultNow(),
+
+});
+
+// New table for performance metrics
+export const PerformanceMetrics = pgTable('performanceMetrics', {
+  id: serial('id').primaryKey(),
+  userEmail: varchar('userEmail').notNull(),
+  mockIdRef: varchar('mockId').notNull(),
+  overallScore: integer('overallScore'),
+  communicationScore: integer('communicationScore'),
+  technicalScore: integer('technicalScore'),
+  problemSolvingScore: integer('problemSolvingScore'),
+  confidenceScore: integer('confidenceScore'),
+  clarityScore: integer('clarityScore'),
+  createdAt: timestamp('createdAt').defaultNow()
 });

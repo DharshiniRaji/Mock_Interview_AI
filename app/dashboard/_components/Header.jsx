@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
+import { LayoutDashboard, BarChart3 } from "lucide-react";
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard" },
@@ -42,6 +43,20 @@ const Header = () => {
             {item.label}
           </Link>
         ))}
+
+        <Link 
+          href="/dashboard/performance"
+          className={`transition-all hover:text-primary hover:underline ${
+            path === '/dashboard/performance' 
+              ? "text-primary font-semibold" 
+              : "text-muted-foreground"
+          }`}
+        >
+          <span className="flex items-center gap-2">
+            <BarChart3 className="w-4 h-4" />
+            Performance
+          </span>
+        </Link>
 
         <div className="ml-4">
           <UserButton />

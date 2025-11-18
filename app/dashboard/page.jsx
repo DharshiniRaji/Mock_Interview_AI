@@ -1,6 +1,7 @@
 import AddNewInterview from "./_components/AddNewInterview";
 import InterviewList from "./_components/InterviewList";
 
+
 const Dashboard = () => {
   return (
     <div className="p-6 md:p-8 mx-auto">
