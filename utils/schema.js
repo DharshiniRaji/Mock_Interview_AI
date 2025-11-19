@@ -2,7 +2,7 @@ import { pgTable, serial, varchar, text , integer,  json, timestamp } from "driz
 
 export const MockInterview = pgTable("mockInterview", {
   id: serial("id").primaryKey(),
-  jsonMockResp: text("jsonMockResp").notNull(),
+  jsonMockResp: json("jsonMockResp").notNull(),
   jobPosition: varchar("jobPosition").notNull(),
   jobDesc: varchar("jobDesc").notNull(),
   jobExperience: varchar("jobExperience").notNull(),
