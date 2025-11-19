@@ -37,12 +37,10 @@ const StartInterview = () => {
       console.log(params.interviewId);
       GetInterviewDetails();
     }
-
-    GetInterviewDetails();
   }, [params.interviewId]);
 
   return (
-    <div>
+    <div className="p-6 md:p-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Questions */}
         <Questions
@@ -58,7 +56,7 @@ const StartInterview = () => {
         />
       </div>
 
-      <div className="flex justify-end gap-6">
+      <div className="flex justify-end gap-6 mt-8">
         {activeQnIndex > 0 && (
           <Button onClick={() => setActiveQnIndex(activeQnIndex - 1)}>
             Previous Question

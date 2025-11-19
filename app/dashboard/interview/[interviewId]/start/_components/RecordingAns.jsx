@@ -7,7 +7,6 @@ import useSpeechToText from "react-hook-speech-to-text";
 import { useUser } from "@clerk/nextjs";
 
 import {
-  AlertTriangleIcon,
   CheckCircleIcon,
   Mic,
   StopCircleIcon,
@@ -129,7 +128,7 @@ const RecordingAns = ({ mockInterviewQns, activeQnIndex, interviewData }) => {
       <Button
         disabled={loading}
         variant="outline"
-        className="my-10 "
+        className="my-10"
         onClick={startStopRecording}
       >
         {isRecording ? (
@@ -142,7 +141,7 @@ const RecordingAns = ({ mockInterviewQns, activeQnIndex, interviewData }) => {
         ) : (
           <h2 className="flex items-center gap-x-2 text-primary">
             <Mic />
-            Record Answer...
+            Record Answer
           </h2>
         )}
       </Button>

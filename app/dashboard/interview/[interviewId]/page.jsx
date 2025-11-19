@@ -28,7 +28,6 @@ const Interview = () => {
 
   useEffect(() => {
     if (params.interviewId) {
-      // console.log(params.interviewId);
       GetInterviewDetails();
     }
   }, [params.interviewId]);
